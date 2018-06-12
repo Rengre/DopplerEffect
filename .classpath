@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="LIB/jcommon-1.0.21.jar"/>
+	<classpathentry exported="true" kind="lib" path="LIB/jfreechart-1.0.19.jar"/>
+	<classpathentry exported="true" kind="lib" path="LIB/orsonpdf-1.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
