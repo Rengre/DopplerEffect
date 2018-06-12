@@ -37,7 +37,8 @@ public class AnimationPanelClass extends JPanel implements ActionListener{  //Re
 	public double maxSize = 0;
 	public boolean initialize = true;
 	Timer timer;
-	
+	double freq;
+	double lambda;
 	
 	
 	Image bike= new ImageIcon("rower1.png").getImage(); // obrazek udostepniony przez strone http://nonciclopedia.wikia.com/wiki/File:Bicicletta.gif
@@ -86,7 +87,8 @@ public class AnimationPanelClass extends JPanel implements ActionListener{  //Re
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if(RightPanelClass.running) {
-		
+			freq = MainGUI.buttonsPanel.sliderFrequency.getValue()*(340+MainGUI.buttonsPanel.sliderVrecipient.getValue())/(340+MainGUI.buttonsPanel.sliderVsource.getValue());
+			lambda = 340/freq;
 			xprev=xSource;
 			xprevR=xObserver;
 			
@@ -122,7 +124,7 @@ public class AnimationPanelClass extends JPanel implements ActionListener{  //Re
 
 		  public void step(double w, double h) {
 			  
-		    esize+=MainGUI.rightPanel.l*10+2;
+		    esize+=lambda*10+2;
 		    if (esize > maxSize) {
 		      setXY(1, w, h);
 		    } else {
